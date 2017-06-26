@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import sys
-from PIL import Image
+from shutil import copyfile
 
 param_1= sys.argv[1] 
-img = Image.open(param_1)
-img.save('grayscale.stl')
+copyfile(sys.argv[1], 'grayscale.stl')
